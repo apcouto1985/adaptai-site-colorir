@@ -12,16 +12,28 @@
 
 /* Variáveis CSS */
 :root {
-  /* Cores principais */
-  --color-primary: #4CAF50;
-  --color-primary-dark: #45a049;
-  --color-primary-light: #81C784;
+  /* Paleta do Girassol - Símbolo de Doenças Ocultas */
+  --color-sunflower-yellow: #FFD700;
+  --color-sunflower-yellow-light: #FFE44D;
+  --color-sunflower-yellow-dark: #FFC700;
   
-  --color-secondary: #2196F3;
-  --color-secondary-dark: #1976D2;
-  --color-secondary-light: #64B5F6;
+  --color-sunflower-green: #4CAF50;
+  --color-sunflower-green-light: #81C784;
+  --color-sunflower-green-dark: #388E3C;
   
-  --color-accent: #FF9800;
+  --color-sunflower-brown: #8B4513;
+  --color-sunflower-orange: #FF9800;
+  
+  /* Cores principais (baseadas no girassol) */
+  --color-primary: var(--color-sunflower-green);
+  --color-primary-dark: var(--color-sunflower-green-dark);
+  --color-primary-light: var(--color-sunflower-green-light);
+  
+  --color-secondary: var(--color-sunflower-yellow);
+  --color-secondary-dark: var(--color-sunflower-yellow-dark);
+  --color-secondary-light: var(--color-sunflower-yellow-light);
+  
+  --color-accent: var(--color-sunflower-orange);
   --color-accent-dark: #F57C00;
   
   /* Cores de texto */
@@ -31,8 +43,8 @@
   
   /* Cores de fundo */
   --color-bg-primary: #FFFFFF;
-  --color-bg-secondary: #F5F5F5;
-  --color-bg-tertiary: #EEEEEE;
+  --color-bg-secondary: #F8FFF8;
+  --color-bg-tertiary: #FFF9E6;
   
   /* Cores de borda */
   --color-border: #DDDDDD;
@@ -106,10 +118,63 @@ body {
   overflow-x: hidden;
 }
 
+/* Cabeçalho do Site */
+.site-header {
+  background: linear-gradient(135deg, var(--color-sunflower-green) 0%, var(--color-sunflower-green-light) 100%);
+  color: white;
+  padding: var(--spacing-xl) 0;
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.header-symbol {
+  font-size: 64px;
+  line-height: 1;
+  animation: rotate-sunflower 20s linear infinite;
+}
+
+@keyframes rotate-sunflower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header-text h1 {
+  color: white;
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-size-xxlarge);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-subtitle {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: var(--font-size-large);
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.header-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0;
+}
+
 /* Container principal */
 #app {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 200px);
   display: flex;
   flex-direction: column;
 }
@@ -359,6 +424,10 @@ select:focus-visible {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  
+  .header-symbol {
+    animation: none !important;
+  }
 }
 
 /* Responsividade - Telas pequenas (<768px) */
@@ -372,6 +441,32 @@ select:focus-visible {
   
   .container {
     padding: 0 var(--spacing-sm);
+  }
+  
+  .site-header {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-md);
+  }
+  
+  .header-symbol {
+    font-size: 48px;
+  }
+  
+  .header-text h1 {
+    font-size: var(--font-size-xlarge);
+  }
+  
+  .header-subtitle {
+    font-size: var(--font-size-base);
+  }
+  
+  .header-description {
+    font-size: var(--font-size-small);
   }
 }
 
