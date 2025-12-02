@@ -1,0 +1,105 @@
+/* Estilos para o componente ColorPalette */
+
+.color-palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+  gap: 8px;
+  padding: 16px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.color-button {
+  width: 100%;
+  min-width: 44px;
+  min-height: 44px;
+  aspect-ratio: 1;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.color-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-button:focus {
+  outline: 3px solid #4A90E2;
+  outline-offset: 2px;
+}
+
+.color-button:focus-visible {
+  outline: 3px solid #2196F3;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(33, 150, 243, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-button.selected {
+  border-color: #333;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #333;
+}
+
+.color-button.selected::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+
+/* Ajuste para cores claras - usar checkmark escuro */
+.color-button[data-color="#FFFFFF"].selected::after,
+.color-button[data-color="#FFFF00"].selected::after,
+.color-button[data-color="#FFB6C1"].selected::after,
+.color-button[data-color="#87CEEB"].selected::after,
+.color-button[data-color="#90EE90"].selected::after,
+.color-button[data-color="#FFD700"].selected::after {
+  color: #333;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .color-palette {
+    grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .color-button {
+    min-width: 48px;
+    min-height: 48px;
+  }
+}
+
+/* Acessibilidade - modo de alto contraste */
+@media (prefers-contrast: high) {
+  .color-button {
+    border-width: 4px;
+  }
+
+  .color-button.selected {
+    border-width: 5px;
+  }
+}
+
+/* Reduzir animações para usuários que preferem */
+@media (prefers-reduced-motion: reduce) {
+  .color-button {
+    transition: none;
+  }
+
+  .color-button:hover {
+    transform: none;
+  }
+}

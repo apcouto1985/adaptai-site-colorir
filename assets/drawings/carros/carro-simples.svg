@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Corpo do carro -->
+  <path id="area-1" d="M 80 180 L 80 140 L 120 100 L 280 100 L 320 140 L 320 180 Z" 
+        fill="white" stroke="black" stroke-width="3"/>
+  
+  <!-- Janela esquerda -->
+  <path id="area-2" d="M 90 135 L 120 110 L 180 110 L 180 135 Z" 
+        fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Janela direita -->
+  <path id="area-3" d="M 220 110 L 280 110 L 310 135 L 220 135 Z" 
+        fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Roda esquerda -->
+  <circle id="area-4" cx="130" cy="180" r="30" 
+          fill="white" stroke="black" stroke-width="3"/>
+  <circle id="area-5" cx="130" cy="180" r="15" 
+          fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Roda direita -->
+  <circle id="area-6" cx="270" cy="180" r="30" 
+          fill="white" stroke="black" stroke-width="3"/>
+  <circle id="area-7" cx="270" cy="180" r="15" 
+          fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Farol -->
+  <circle id="area-8" cx="330" cy="150" r="8" 
+          fill="white" stroke="black" stroke-width="2"/>
+</svg>

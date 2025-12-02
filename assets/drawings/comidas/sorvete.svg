@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Casquinha -->
+  <path id="area-1" d="M 150 180 L 200 280 L 250 180 Z" 
+        fill="white" stroke="black" stroke-width="3"/>
+  
+  <!-- Padrão da casquinha (linhas cruzadas) -->
+  <line x1="170" y1="200" x2="230" y2="200" stroke="black" stroke-width="2"/>
+  <line x1="180" y1="220" x2="220" y2="220" stroke="black" stroke-width="2"/>
+  <line x1="190" y1="240" x2="210" y2="240" stroke="black" stroke-width="2"/>
+  
+  <!-- Bola de sorvete 1 (base) -->
+  <circle id="area-2" cx="200" cy="150" r="40" 
+          fill="white" stroke="black" stroke-width="3"/>
+  
+  <!-- Bola de sorvete 2 (meio) -->
+  <circle id="area-3" cx="200" cy="100" r="35" 
+          fill="white" stroke="black" stroke-width="3"/>
+  
+  <!-- Bola de sorvete 3 (topo) -->
+  <circle id="area-4" cx="200" cy="55" r="30" 
+          fill="white" stroke="black" stroke-width="3"/>
+  
+  <!-- Cereja -->
+  <circle id="area-5" cx="200" cy="30" r="8" 
+          fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Haste da cereja -->
+  <path d="M 200 30 Q 205 20 200 10" 
+        fill="none" stroke="black" stroke-width="2"/>
+  
+  <!-- Cobertura escorrendo 1 -->
+  <path id="area-6" d="M 170 140 Q 165 160 170 170" 
+        fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Cobertura escorrendo 2 -->
+  <path id="area-7" d="M 230 140 Q 235 160 230 170" 
+        fill="white" stroke="black" stroke-width="2"/>
+</svg>

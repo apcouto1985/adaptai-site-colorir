@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Corpo -->
+  <ellipse id="area-1" cx="200" cy="150" rx="80" ry="50" 
+           fill="white" stroke="black" stroke-width="3"/>
+  
+  <!-- Cauda -->
+  <path id="area-2" d="M 280 150 L 340 120 L 340 180 Z" 
+        fill="white" stroke="black" stroke-width="3"/>
+  
+  <!-- Barbatana superior -->
+  <path id="area-3" d="M 200 100 L 180 60 L 220 90 Z" 
+        fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Barbatana inferior -->
+  <path id="area-4" d="M 200 200 L 180 240 L 220 210 Z" 
+        fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Barbatana lateral -->
+  <ellipse id="area-5" cx="150" cy="160" rx="25" ry="15" 
+           fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Olho -->
+  <circle id="area-6" cx="160" cy="140" r="12" 
+          fill="white" stroke="black" stroke-width="2"/>
+  <circle id="area-7" cx="160" cy="140" r="6" 
+          fill="black" stroke="black" stroke-width="2"/>
+  
+  <!-- Boca -->
+  <path id="area-8" d="M 130 150 Q 120 155 130 160" 
+        fill="none" stroke="black" stroke-width="2"/>
+  
+  <!-- Escamas (decorativas) -->
+  <circle id="area-9" cx="200" cy="150" r="8" 
+          fill="white" stroke="black" stroke-width="2"/>
+  <circle id="area-10" cx="230" cy="140" r="8" 
+          fill="white" stroke="black" stroke-width="2"/>
+  <circle id="area-11" cx="230" cy="160" r="8" 
+          fill="white" stroke="black" stroke-width="2"/>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Base do bolo (camada inferior) -->
+  <rect id="area-1" x="100" y="200" width="200" height="60" 
+        fill="white" stroke="black" stroke-width="3"/>
+  
+  <!-- Camada do meio -->
+  <rect id="area-2" x="120" y="150" width="160" height="50" 
+        fill="white" stroke="black" stroke-width="3"/>
+  
+  <!-- Camada superior -->
+  <rect id="area-3" x="140" y="100" width="120" height="50" 
+        fill="white" stroke="black" stroke-width="3"/>
+  
+  <!-- Cobertura topo -->
+  <ellipse id="area-4" cx="200" cy="100" rx="60" ry="15" 
+           fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Vela 1 -->
+  <rect id="area-5" x="180" y="70" width="8" height="30" 
+        fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Vela 2 -->
+  <rect id="area-6" x="210" y="70" width="8" height="30" 
+        fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Chama vela 1 -->
+  <ellipse id="area-7" cx="184" cy="65" rx="6" ry="10" 
+           fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Chama vela 2 -->
+  <ellipse id="area-8" cx="214" cy="65" rx="6" ry="10" 
+           fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Decoração 1 -->
+  <circle id="area-9" cx="150" cy="125" r="8" 
+          fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Decoração 2 -->
+  <circle id="area-10" cx="200" cy="125" r="8" 
+          fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Decoração 3 -->
+  <circle id="area-11" cx="250" cy="125" r="8" 
+          fill="white" stroke="black" stroke-width="2"/>
+</svg>

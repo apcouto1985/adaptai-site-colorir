@@ -1,0 +1,190 @@
+{
+  "categories": [
+    {
+      "id": "carros",
+      "name": "Carros",
+      "drawings": [
+        {
+          "id": "carro-simples",
+          "name": "Carro Simples",
+          "category": "carros",
+          "svgUrl": "/assets/drawings/carros/carro-simples.svg",
+          "thumbnailUrl": "/assets/thumbnails/carros/carro-simples.svg",
+          "metadata": {
+            "width": 800,
+            "height": 600,
+            "areaCount": 15
+          }
+        },
+        {
+          "id": "caminhao",
+          "name": "Caminhão",
+          "category": "carros",
+          "svgUrl": "/assets/drawings/carros/caminhao.svg",
+          "thumbnailUrl": "/assets/thumbnails/carros/caminhao.svg",
+          "metadata": {
+            "width": 800,
+            "height": 600,
+            "areaCount": 18
+          }
+        },
+        {
+          "id": "onibus",
+          "name": "Ônibus",
+          "category": "carros",
+          "svgUrl": "/assets/drawings/carros/onibus.svg",
+          "thumbnailUrl": "/assets/thumbnails/carros/onibus.svg",
+          "metadata": {
+            "width": 800,
+            "height": 600,
+            "areaCount": 20
+          }
+        }
+      ]
+    },
+    {
+      "id": "esportes",
+      "name": "Esportes",
+      "drawings": []
+    },
+    {
+      "id": "paisagens",
+      "name": "Paisagens",
+      "drawings": []
+    },
+    {
+      "id": "locais",
+      "name": "Locais",
+      "drawings": []
+    },
+    {
+      "id": "comidas",
+      "name": "Comidas",
+      "drawings": [
+        {
+          "id": "pizza",
+          "name": "Pizza",
+          "category": "comidas",
+          "svgUrl": "/assets/drawings/comidas/pizza.svg",
+          "thumbnailUrl": "/assets/thumbnails/comidas/pizza.svg",
+          "metadata": {
+            "width": 800,
+            "height": 600,
+            "areaCount": 12
+          }
+        },
+        {
+          "id": "sorvete",
+          "name": "Sorvete",
+          "category": "comidas",
+          "svgUrl": "/assets/drawings/comidas/sorvete.svg",
+          "thumbnailUrl": "/assets/thumbnails/comidas/sorvete.svg",
+          "metadata": {
+            "width": 800,
+            "height": 600,
+            "areaCount": 10
+          }
+        },
+        {
+          "id": "bolo",
+          "name": "Bolo",
+          "category": "comidas",
+          "svgUrl": "/assets/drawings/comidas/bolo.svg",
+          "thumbnailUrl": "/assets/thumbnails/comidas/bolo.svg",
+          "metadata": {
+            "width": 800,
+            "height": 600,
+            "areaCount": 14
+          }
+        }
+      ]
+    },
+    {
+      "id": "insetos",
+      "name": "Insetos",
+      "drawings": []
+    },
+    {
+      "id": "animais",
+      "name": "Animais",
+      "drawings": [
+        {
+          "id": "gato",
+          "name": "Gato",
+          "category": "animais",
+          "svgUrl": "/assets/drawings/animais/gato.svg",
+          "thumbnailUrl": "/assets/thumbnails/animais/gato.svg",
+          "metadata": {
+            "width": 800,
+            "height": 600,
+            "areaCount": 16
+          }
+        },
+        {
+          "id": "cachorro",
+          "name": "Cachorro",
+          "category": "animais",
+          "svgUrl": "/assets/drawings/animais/cachorro.svg",
+          "thumbnailUrl": "/assets/thumbnails/animais/cachorro.svg",
+          "metadata": {
+            "width": 800,
+            "height": 600,
+            "areaCount": 18
+          }
+        },
+        {
+          "id": "peixe",
+          "name": "Peixe",
+          "category": "animais",
+          "svgUrl": "/assets/drawings/animais/peixe.svg",
+          "thumbnailUrl": "/assets/thumbnails/animais/peixe.svg",
+          "metadata": {
+            "width": 800,
+            "height": 600,
+            "areaCount": 12
+          }
+        }
+      ]
+    },
+    {
+      "id": "bandeiras",
+      "name": "Bandeiras",
+      "drawings": []
+    },
+    {
+      "id": "castelos",
+      "name": "Castelos",
+      "drawings": []
+    },
+    {
+      "id": "piratas",
+      "name": "Piratas",
+      "drawings": []
+    },
+    {
+      "id": "sereias",
+      "name": "Sereias",
+      "drawings": []
+    },
+    {
+      "id": "princesas",
+      "name": "Princesas",
+      "drawings": []
+    },
+    {
+      "id": "monstros",
+      "name": "Monstros",
+      "drawings": []
+    },
+    {
+      "id": "ocupações",
+      "name": "Ocupações",
+      "drawings": []
+    },
+    {
+      "id": "dinossauros",
+      "name": "Dinossauros",
+      "drawings": []
+    }
+  ]
+}
