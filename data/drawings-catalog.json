@@ -155,6 +155,18 @@
             "height": 667,
             "areaCount": 299
           }
+        },
+        {
+          "id": "cachorro-novo",
+          "name": "Cachorro Novo",
+          "category": "animais",
+          "svgUrl": "/assets/drawings/animais/cachorro-novo.svg",
+          "thumbnailUrl": "/assets/thumbnails/animais/cachorro-novo.svg",
+          "metadata": {
+            "width": 500,
+            "height": 500,
+            "areaCount": 20
+          }
         }
       ]
     },
