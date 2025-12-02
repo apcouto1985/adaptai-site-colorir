@@ -143,6 +143,18 @@
             "height": 600,
             "areaCount": 12
           }
+        },
+        {
+          "id": "kawaii-animal",
+          "name": "Animal Kawaii",
+          "category": "animais",
+          "svgUrl": "/assets/drawings/animais/kawaii-animal.svg",
+          "thumbnailUrl": "/assets/thumbnails/animais/kawaii-animal.svg",
+          "metadata": {
+            "width": 667,
+            "height": 667,
+            "areaCount": 299
+          }
         }
       ]
     },
