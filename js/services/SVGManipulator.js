@@ -149,7 +149,8 @@ export class SVGManipulator {
       return;
     }
 
-    element.setAttribute('fill', color);
+    // Usar style.fill para sobrescrever estilos inline
+    element.style.fill = color;
   }
 
   /**
