@@ -7,6 +7,11 @@
 
 import fs from 'fs';
 import path from 'path';
+import { SVGParser } from './SVGParser.js';
+import { ElementClassifier } from './ElementClassifier.js';
+import { TransformEngine } from './TransformEngine.js';
+import { ValidationEngine } from './ValidationEngine.js';
+import { SVGGenerator } from './SVGGenerator.js';
 
 /**
  * Custom error for CLI-related issues
@@ -36,20 +41,85 @@ export class SVGAdapterCLI {
         return;
       }
       
-      // Placeholder for actual adaptation logic (will be implemented in Task 9)
-      const result = {
-        success: true,
-        outputPath: options.outputPath,
-        colorableCount: 0,
-        decorativeCount: 0,
-        idsAssigned: 0,
-        validation: null
-      };
+      // Execute adaptation flow
+      const result = await this.adaptSVG(
+        options.inputPath,
+        options.outputPath,
+        options.validate,
+        options.interactive
+      );
       
       this.displayResults(result);
     } catch (error) {
       this.displayError(error);
       throw error; // Re-throw for testing purposes
+    }
+  }
+
+  /**
+   * Orchestrates the complete SVG adaptation flow
+   * @param {string} inputPath - Input SVG file path
+   * @param {string} outputPath - Output SVG file path
+   * @param {boolean} validate - Whether to run validation
+   * @param {boolean} interactive - Whether to run in interactive mode
+   * @returns {Promise<AdaptationResult>} Adaptation result
+   */
+  async adaptSVG(inputPath, outputPath, validate = false, interactive = false) {
+    try {
+      // Step 1: Validate input file exists
+      if (!fs.existsSync(inputPath)) {
+        throw new CLIError(`Arquivo não encontrado: ${inputPath}`);
+      }
+
+      // Step 2: Parse SVG
+      const parser = new SVGParser();
+      const svgDoc = await parser.parse(inputPath);
+
+      // Step 3: Classify elements
+      const classifier = new ElementClassifier();
+      const classification = classifier.classify(svgDoc.elements);
+
+      // Step 4: Interactive mode (if enabled)
+      if (interactive) {
+        // TODO: Implement interactive reclassification in Task 10
+        console.log('\n⚠ Modo interativo ainda não implementado\n');
+      }
+
+      // Step 5: Transform elements
+      const transformer = new TransformEngine();
+      const transformResult = transformer.transform(svgDoc.element, classification);
+
+      // Step 6: Validate (if requested)
+      let validationResult = null;
+      if (validate) {
+        const validator = new ValidationEngine();
+        validationResult = validator.validate(transformResult.svg);
+      }
+
+      // Step 7: Generate output file
+      const generator = new SVGGenerator();
+      const generationResult = await generator.generate(
+        transformResult.svg,
+        outputPath,
+        transformResult
+      );
+
+      // Return complete result
+      return {
+        success: true,
+        outputPath: generationResult.outputPath,
+        colorableCount: generationResult.stats.colorableAreas,
+        decorativeCount: generationResult.stats.decorativeElements,
+        idsAssigned: generationResult.stats.idsAssigned,
+        validation: validationResult
+      };
+
+    } catch (error) {
+      // Wrap non-CLI errors
+      if (!(error instanceof CLIError)) {
+        throw new CLIError(`Erro durante adaptação: ${error.message}`);
+      }
+      throw error;
     }
   }
 

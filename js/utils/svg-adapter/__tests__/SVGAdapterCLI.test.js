@@ -307,6 +307,16 @@ describe('SVGAdapterCLI - Unit Tests', () => {
     });
 
     it('displays results on successful run', async () => {
+      // Mock adaptSVG to return success result
+      cli.adaptSVG = async () => ({
+        success: true,
+        outputPath: 'drawing-adapted.svg',
+        colorableCount: 5,
+        decorativeCount: 3,
+        idsAssigned: 5,
+        validation: null
+      });
+      
       await cli.run(['drawing.svg']);
       
       expect(consoleLogSpy.calls.length).toBeGreaterThan(0);
