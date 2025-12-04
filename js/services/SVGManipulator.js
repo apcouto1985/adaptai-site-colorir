@@ -90,7 +90,43 @@ export class SVGManipulator {
   }
 
   /**
+   * Verifica se um elemento tem cor decorativa na estrutura original
+   * Usado apenas para validação de SVG, não para identificação durante coloração
+   * @param {Element} element - Elemento a verificar
+   * @returns {boolean} True se tem cor decorativa
+   * @private
+   */
+  _hasDecorativeColor(element) {
+    if (!element) {
+      return false;
+    }
+    
+    const fill = element.getAttribute('fill');
+    const decorativeColors = ['#B5B5B5', '#222221', '#000000', 'black', 'gray'];
+    return fill && decorativeColors.includes(fill.toUpperCase());
+  }
+
+  /**
+   * Verifica se um elemento é decorativo (não colorível)
+   * Elementos decorativos são contornos, sombras ou bordas que não devem ser coloridos
+   * @param {Element} element - Elemento a verificar
+   * @returns {boolean} True se decorativo, false se colorível
+   */
+  isDecorativeElement(element) {
+    if (!element) {
+      return false;
+    }
+
+    // Verificar pointer-events="none"
+    // Este é o único critério confiável para identificar elementos decorativos
+    // pois a cor pode ser alterada pelo usuário durante a coloração
+    const pointerEvents = element.getAttribute('pointer-events');
+    return pointerEvents === 'none';
+  }
+
+  /**
    * Identifica todas as áreas coloríveis em um SVG
+   * Filtra elementos decorativos e retorna apenas áreas coloríveis válidas
    * @param {SVGElement} svg - Elemento SVG
    * @returns {Array<import('../models/ColorableArea.js').ColorableArea>} Array de áreas coloríveis
    */
@@ -106,6 +142,11 @@ export class SVGManipulator {
     const elements = svg.querySelectorAll('[id^="area-"]');
     
     elements.forEach(element => {
+      // Filtrar elementos decorativos
+      if (this.isDecorativeElement(element)) {
+        return;
+      }
+      
       const area = createColorableArea(element);
       if (area) {
         areas.push(area);
@@ -149,8 +190,8 @@ export class SVGManipulator {
       return;
     }
 
-    // Usar style.fill para sobrescrever estilos inline
-    element.style.fill = color;
+    // Usar setAttribute para modificar o atributo fill do SVG
+    element.setAttribute('fill', color);
   }
 
   /**
@@ -227,6 +268,71 @@ export class SVGManipulator {
     }
 
     return fill;
+  }
+
+  /**
+   * Valida a estrutura de um SVG
+   * Verifica IDs únicos, áreas coloríveis e elementos decorativos
+   * @param {SVGElement} svg - Elemento SVG
+   * @returns {Object} Resultado da validação com erros e avisos
+   * @returns {boolean} result.valid - Se o SVG é válido
+   * @returns {string[]} result.errors - Erros críticos
+   * @returns {string[]} result.warnings - Avisos não críticos
+   * @returns {string[]} result.colorableAreas - IDs de áreas coloríveis
+   * @returns {string[]} result.decorativeElements - IDs de elementos decorativos
+   */
+  validateSVGStructure(svg) {
+    const result = {
+      valid: true,
+      errors: [],
+      warnings: [],
+      colorableAreas: [],
+      decorativeElements: []
+    };
+
+    if (!svg || !(svg instanceof SVGElement)) {
+      result.valid = false;
+      result.errors.push('SVG inválido ou não fornecido');
+      return result;
+    }
+    
+    // Verificar IDs únicos
+    const ids = new Map();
+    const elements = svg.querySelectorAll('[id^="area-"]');
+    
+    elements.forEach(element => {
+      const id = element.getAttribute('id');
+      
+      if (ids.has(id)) {
+        result.errors.push(`ID duplicado encontrado: ${id}`);
+        result.valid = false;
+      } else {
+        ids.set(id, element);
+      }
+      
+      // Classificar elemento
+      // Na validação, consideramos decorativo se tem pointer-events="none" OU cor decorativa
+      const hasPointerEventsNone = this.isDecorativeElement(element);
+      const hasDecorativeColor = this._hasDecorativeColor(element);
+      
+      if (hasPointerEventsNone || hasDecorativeColor) {
+        result.decorativeElements.push(id);
+        
+        // Verificar se elemento decorativo tem pointer-events="none"
+        if (!hasPointerEventsNone) {
+          result.warnings.push(`Elemento decorativo ${id} não possui pointer-events="none"`);
+        }
+      } else {
+        result.colorableAreas.push(id);
+      }
+    });
+    
+    // Verificar se há áreas coloríveis
+    if (result.colorableAreas.length === 0) {
+      result.warnings.push('Nenhuma área colorível encontrada');
+    }
+    
+    return result;
   }
 }
 

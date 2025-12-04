@@ -143,7 +143,9 @@ describe('Propriedade 11: Uso consistente da cor selecionada', () => {
           const uniqueIndices = [...new Set(areaIndices)];
           uniqueIndices.forEach(index => {
             const areaId = `area-${index}`;
-            screen.svgCanvas.handleAreaClick(areaId);
+            const element = svg.querySelector(`#${areaId}`);
+            const mockEvent = { target: element };
+            screen.svgCanvas.handleAreaClick(mockEvent, areaId);
           });
 
           // Verificar que todas as áreas foram pintadas com a mesma cor
@@ -219,7 +221,9 @@ describe('Propriedade 21: Limpeza completa do desenho', () => {
             const areaId = `area-${index}`;
             const color = colors[i % colors.length];
             screen.colorPalette.selectColor(color);
-            screen.svgCanvas.handleAreaClick(areaId);
+            const element = svg.querySelector(`#${areaId}`);
+            const mockEvent = { target: element };
+            screen.svgCanvas.handleAreaClick(mockEvent, areaId);
           });
 
           // Limpar desenho
@@ -296,7 +300,9 @@ describe('Propriedade 22: Preservação de cor selecionada ao limpar', () => {
           const uniqueIndices = [...new Set(areaIndices)];
           uniqueIndices.forEach(index => {
             const areaId = `area-${index}`;
-            screen.svgCanvas.handleAreaClick(areaId);
+            const element = svg.querySelector(`#${areaId}`);
+            const mockEvent = { target: element };
+            screen.svgCanvas.handleAreaClick(mockEvent, areaId);
           });
 
           // Limpar desenho

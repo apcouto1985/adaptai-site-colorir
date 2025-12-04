@@ -205,6 +205,7 @@ export class ColoringScreen {
    * @param {string} color - Cor selecionada
    */
   handleColorSelect(color) {
+    console.log('[ColoringScreen] Cor selecionada:', color, 'tipo:', typeof color);
     this.selectedColor = color;
     
     // Atualizar cor no canvas
