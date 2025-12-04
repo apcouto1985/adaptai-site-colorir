@@ -1,0 +1,13 @@
+{
+  "name": "Auto Commit & Push on Save",
+  "description": "Automaticamente faz commit e push das mudanças quando arquivos importantes são salvos",
+  "enabled": false,
+  "trigger": {
+    "type": "onFileSave",
+    "filePattern": "**/*.{js,json,md,css,html,svg}"
+  },
+  "action": {
+    "type": "shellCommand",
+    "command": "git add . && git diff --cached --quiet || (git commit -m 'auto: salvar progresso' && git push)"
+  }
+}
