@@ -25,6 +25,7 @@ export class ColoringScreen {
     this.container = container;
     this.drawing = options.drawing;
     this.onBack = options.onBack || (() => {});
+    this.appState = options.applicationState || null;
 
     // Estado
     this.selectedColor = null;
@@ -207,6 +208,9 @@ export class ColoringScreen {
     if (this.svgCanvas) {
       this.svgCanvas.setSelectedColor(color);
     }
+    if (this.appState) {
+      this.appState.setSelectedColor(color);
+    }
   }
 
   /**
@@ -216,6 +220,9 @@ export class ColoringScreen {
    */
   handleAreaClick(areaId, color) {
     this.coloredAreas.set(areaId, color);
+    if (this.appState) {
+      this.appState.setAreaColor(areaId, color);
+    }
   }
 
   /**
@@ -226,6 +233,9 @@ export class ColoringScreen {
       this.svgCanvas.clearAllColors();
     }
     this.coloredAreas.clear();
+    if (this.appState) {
+      this.appState.clearAllColors();
+    }
     // A cor selecionada deve permanecer a mesma (Propriedade 22)
   }
 

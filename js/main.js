@@ -122,7 +122,8 @@ class App {
     // Criar nova tela de colorir
     this.coloringScreen = new ColoringScreen(this.coloringContainer, {
       drawing: drawing,
-      onBack: () => this.handleBackToGallery()
+      onBack: () => this.handleBackToGallery(),
+      applicationState: this.applicationState
     });
   }
 
