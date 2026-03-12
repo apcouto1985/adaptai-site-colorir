@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Bombeiro -->
+  <!-- Capacete -->
+  <path id="area-1" d="M145,80 Q145,45 200,40 Q255,45 255,80 L260,95 L140,95Z" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Emblema do capacete -->
+  <circle id="area-2" cx="200" cy="65" r="12" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Cabeça -->
+  <circle id="area-3" cx="200" cy="120" r="35" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Olhos -->
+  <circle id="area-4" cx="188" cy="115" r="5" fill="none" stroke="black" stroke-width="2"/>
+  <circle id="area-5" cx="212" cy="115" r="5" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Sorriso -->
+  <path id="area-6" d="M190,133 Q200,142 210,133" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Corpo/jaqueta -->
+  <rect id="area-7" x="150" y="155" width="100" height="120" rx="5" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Faixa refletiva -->
+  <rect id="area-8" x="150" y="210" width="100" height="12" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Calça -->
+  <rect id="area-9" x="155" y="275" width="40" height="80" fill="none" stroke="black" stroke-width="2"/>
+  <rect id="area-10" x="205" y="275" width="40" height="80" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Botas -->
+  <rect id="area-11" x="150" y="340" width="50" height="25" rx="5" fill="none" stroke="black" stroke-width="2"/>
+  <rect id="area-12" x="200" y="340" width="50" height="25" rx="5" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Mangueira -->
+  <path id="area-13" d="M250,200 Q300,190 320,220 Q340,250 310,270" fill="none" stroke="black" stroke-width="4"/>
+  <!-- Braço -->
+  <path id="area-14" d="M250,180 Q270,190 280,200" fill="none" stroke="black" stroke-width="3"/>
+</svg>

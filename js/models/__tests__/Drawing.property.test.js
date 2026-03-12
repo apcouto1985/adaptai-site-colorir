@@ -102,7 +102,7 @@ describe('Drawing Property Tests', () => {
     const validCategories = [
       'carros', 'esportes', 'paisagens', 'locais', 'comidas',
       'insetos', 'animais', 'bandeiras', 'castelos', 'piratas',
-      'sereias', 'princesas', 'monstros', 'ocupações', 'dinossauros'
+      'sereias', 'princesas', 'monstros', 'ocupacoes', 'dinossauros'
     ];
 
     validCategories.forEach(category => {

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Paisagem com sol, montanhas e árvore -->
+  <!-- Céu -->
+  <rect id="area-1" x="0" y="0" width="400" height="200" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Sol -->
+  <circle id="area-2" cx="320" cy="70" r="45" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Raios do sol -->
+  <path id="area-3" d="M320,15 L325,5 L315,5Z M365,50 L380,45 L375,55Z M365,90 L380,95 L375,85Z M320,125 L325,135 L315,135Z M275,90 L260,95 L265,85Z M275,50 L260,45 L265,55Z" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Montanha grande -->
+  <polygon id="area-4" points="50,280 200,100 350,280" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Neve no topo -->
+  <polygon id="area-5" points="175,130 200,100 225,130 210,140 190,140" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Montanha pequena -->
+  <polygon id="area-6" points="200,280 300,160 400,280" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Chão/grama -->
+  <rect id="area-7" x="0" y="280" width="400" height="120" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Árvore tronco -->
+  <rect id="area-8" x="55" y="240" width="20" height="50" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Árvore copa -->
+  <circle id="area-9" cx="65" cy="220" r="35" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Nuvem -->
+  <ellipse id="area-10" cx="120" cy="50" rx="50" ry="25" fill="none" stroke="black" stroke-width="2"/>
+  <ellipse id="area-11" cx="150" cy="40" rx="35" ry="20" fill="none" stroke="black" stroke-width="2"/>
+</svg>

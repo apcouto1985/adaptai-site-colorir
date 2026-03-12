@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Princesa -->
+  <!-- Cabeça -->
+  <circle id="area-1" cx="200" cy="80" r="40" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Cabelo -->
+  <path id="area-2" d="M160,80 Q155,40 175,30 Q200,20 225,30 Q245,40 240,80" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Cabelo lateral esquerdo -->
+  <path id="area-3" d="M160,80 Q150,100 145,140 Q140,160 155,170" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Cabelo lateral direito -->
+  <path id="area-4" d="M240,80 Q250,100 255,140 Q260,160 245,170" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Coroa -->
+  <polygon id="area-5" points="170,45 175,25 185,40 200,15 215,40 225,25 230,45" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Olhos -->
+  <ellipse id="area-6" cx="185" cy="78" rx="7" ry="9" fill="none" stroke="black" stroke-width="2"/>
+  <ellipse id="area-7" cx="215" cy="78" rx="7" ry="9" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Sorriso -->
+  <path id="area-8" d="M188,98 Q200,110 212,98" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Corpo/vestido parte superior -->
+  <path id="area-9" d="M170,120 L155,170 L245,170 L230,120Z" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Saia do vestido -->
+  <path id="area-10" d="M120,170 L100,370 L300,370 L280,170Z" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Cinto -->
+  <rect id="area-11" x="140" y="170" width="120" height="15" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Detalhe da saia -->
+  <path id="area-12" d="M140,250 Q200,230 260,250" fill="none" stroke="black" stroke-width="2"/>
+  <path id="area-13" d="M120,320 Q200,300 280,320" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Braço esquerdo -->
+  <path id="area-14" d="M155,170 Q120,200 110,230" fill="none" stroke="black" stroke-width="3"/>
+  <!-- Braço direito -->
+  <path id="area-15" d="M245,170 Q280,200 290,230" fill="none" stroke="black" stroke-width="3"/>
+  <!-- Joia no cinto -->
+  <circle id="area-16" cx="200" cy="177" r="6" fill="none" stroke="black" stroke-width="2"/>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Chapéu e espada pirata -->
+  <!-- Chapéu -->
+  <path id="area-1" d="M80,180 Q80,100 200,80 Q320,100 320,180Z" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Aba do chapéu -->
+  <path id="area-2" d="M60,180 Q60,200 80,210 L320,210 Q340,200 340,180Z" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Caveira no chapéu -->
+  <circle id="area-3" cx="200" cy="140" r="22" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Olhos da caveira -->
+  <circle id="area-4" cx="190" cy="135" r="5" fill="none" stroke="black" stroke-width="2"/>
+  <circle id="area-5" cx="210" cy="135" r="5" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Ossos cruzados -->
+  <path id="area-6" d="M175,155 L225,170 M225,155 L175,170" fill="none" stroke="black" stroke-width="3"/>
+  <!-- Espada -->
+  <rect id="area-7" x="195" y="240" width="10" height="120" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Guarda da espada -->
+  <rect id="area-8" x="170" y="235" width="60" height="12" rx="4" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Cabo da espada -->
+  <rect id="area-9" x="190" y="355" width="20" height="30" rx="3" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Lâmina ponta -->
+  <polygon id="area-10" points="195,240 205,240 200,225" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Mapa do tesouro (enrolado) -->
+  <rect id="area-11" x="50" y="300" width="80" height="60" rx="5" fill="none" stroke="black" stroke-width="2"/>
+  <circle id="area-12" cx="50" cy="330" r="10" fill="none" stroke="black" stroke-width="2"/>
+  <circle id="area-13" cx="130" cy="330" r="10" fill="none" stroke="black" stroke-width="2"/>
+</svg>

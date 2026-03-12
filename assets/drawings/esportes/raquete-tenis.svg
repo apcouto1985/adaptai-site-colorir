@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Raquete e bola de tênis -->
+  <!-- Cabo -->
+  <rect id="area-1" x="170" y="260" width="60" height="120" rx="10" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Cabeça da raquete -->
+  <ellipse id="area-2" cx="200" cy="180" rx="100" ry="130" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Cordas horizontais -->
+  <rect id="area-3" x="120" y="120" width="160" height="40" fill="none" stroke="black" stroke-width="2"/>
+  <rect id="area-4" x="110" y="170" width="180" height="40" fill="none" stroke="black" stroke-width="2"/>
+  <rect id="area-5" x="130" y="220" width="140" height="30" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Bola -->
+  <circle id="area-6" cx="340" cy="80" r="40" fill="none" stroke="black" stroke-width="2"/>
+  <path id="area-7" d="M310,55 Q340,80 310,105" fill="none" stroke="black" stroke-width="2"/>
+  <path id="area-8" d="M370,55 Q340,80 370,105" fill="none" stroke="black" stroke-width="2"/>
+</svg>

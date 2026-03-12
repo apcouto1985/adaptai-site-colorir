@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Borboleta -->
+  <!-- Corpo -->
+  <ellipse id="area-1" cx="200" cy="200" rx="12" ry="80" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Cabeça -->
+  <circle id="area-2" cx="200" cy="110" r="18" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Antena esquerda -->
+  <path id="area-3" d="M192,95 Q170,60 165,50" fill="none" stroke="black" stroke-width="2"/>
+  <circle cx="165" cy="48" r="5" fill="none" stroke="black" stroke-width="2" pointer-events="none"/>
+  <!-- Antena direita -->
+  <path id="area-4" d="M208,95 Q230,60 235,50" fill="none" stroke="black" stroke-width="2"/>
+  <circle cx="235" cy="48" r="5" fill="none" stroke="black" stroke-width="2" pointer-events="none"/>
+  <!-- Asa superior esquerda -->
+  <path id="area-5" d="M188,160 Q100,100 80,140 Q60,180 120,200 Q160,210 188,200" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Asa superior direita -->
+  <path id="area-6" d="M212,160 Q300,100 320,140 Q340,180 280,200 Q240,210 212,200" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Asa inferior esquerda -->
+  <path id="area-7" d="M188,210 Q130,220 100,260 Q80,300 140,290 Q170,280 188,250" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Asa inferior direita -->
+  <path id="area-8" d="M212,210 Q270,220 300,260 Q320,300 260,290 Q230,280 212,250" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Detalhes nas asas -->
+  <circle id="area-9" cx="130" cy="165" r="18" fill="none" stroke="black" stroke-width="2"/>
+  <circle id="area-10" cx="270" cy="165" r="18" fill="none" stroke="black" stroke-width="2"/>
+  <circle id="area-11" cx="125" cy="260" r="14" fill="none" stroke="black" stroke-width="2"/>
+  <circle id="area-12" cx="275" cy="260" r="14" fill="none" stroke="black" stroke-width="2"/>
+</svg>

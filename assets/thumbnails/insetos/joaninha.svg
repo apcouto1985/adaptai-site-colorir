@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Joaninha -->
+  <!-- Corpo -->
+  <ellipse id="area-1" cx="200" cy="220" rx="120" ry="100" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Cabeça -->
+  <circle id="area-2" cx="200" cy="110" r="45" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Olho esquerdo -->
+  <circle id="area-3" cx="180" cy="100" r="12" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Olho direito -->
+  <circle id="area-4" cx="220" cy="100" r="12" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Linha central do corpo -->
+  <line x1="200" y1="140" x2="200" y2="320" stroke="black" stroke-width="2" pointer-events="none"/>
+  <!-- Pintas -->
+  <circle id="area-5" cx="155" cy="190" r="16" fill="none" stroke="black" stroke-width="2"/>
+  <circle id="area-6" cx="245" cy="190" r="16" fill="none" stroke="black" stroke-width="2"/>
+  <circle id="area-7" cx="140" cy="250" r="14" fill="none" stroke="black" stroke-width="2"/>
+  <circle id="area-8" cx="260" cy="250" r="14" fill="none" stroke="black" stroke-width="2"/>
+  <circle id="area-9" cx="170" cy="290" r="12" fill="none" stroke="black" stroke-width="2"/>
+  <circle id="area-10" cx="230" cy="290" r="12" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Antenas -->
+  <path id="area-11" d="M185,70 Q170,40 155,30" fill="none" stroke="black" stroke-width="2"/>
+  <path id="area-12" d="M215,70 Q230,40 245,30" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Patinhas -->
+  <path id="area-13" d="M90,200 L60,180" fill="none" stroke="black" stroke-width="3"/>
+  <path id="area-14" d="M310,200 L340,180" fill="none" stroke="black" stroke-width="3"/>
+  <path id="area-15" d="M85,250 L55,260" fill="none" stroke="black" stroke-width="3"/>
+  <path id="area-16" d="M315,250 L345,260" fill="none" stroke="black" stroke-width="3"/>
+</svg>

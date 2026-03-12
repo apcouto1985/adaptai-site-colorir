@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Arco-íris com nuvens -->
+  <!-- Nuvem esquerda -->
+  <ellipse id="area-1" cx="60" cy="280" rx="50" ry="30" fill="none" stroke="black" stroke-width="2"/>
+  <ellipse id="area-2" cx="90" cy="265" rx="35" ry="25" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Nuvem direita -->
+  <ellipse id="area-3" cx="340" cy="280" rx="50" ry="30" fill="none" stroke="black" stroke-width="2"/>
+  <ellipse id="area-4" cx="310" cy="265" rx="35" ry="25" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Faixas do arco-íris (de fora para dentro) -->
+  <path id="area-5" d="M60,280 Q60,80 340,280" fill="none" stroke="black" stroke-width="2"/>
+  <path id="area-6" d="M80,280 Q80,110 320,280" fill="none" stroke="black" stroke-width="2"/>
+  <path id="area-7" d="M100,280 Q100,130 300,280" fill="none" stroke="black" stroke-width="2"/>
+  <path id="area-8" d="M120,280 Q120,150 280,280" fill="none" stroke="black" stroke-width="2"/>
+  <path id="area-9" d="M140,280 Q140,170 260,280" fill="none" stroke="black" stroke-width="2"/>
+  <path id="area-10" d="M160,280 Q160,190 240,280" fill="none" stroke="black" stroke-width="2"/>
+  <path id="area-11" d="M180,280 Q180,210 220,280" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Sol atrás -->
+  <circle id="area-12" cx="200" cy="60" r="40" fill="none" stroke="black" stroke-width="2"/>
+</svg>

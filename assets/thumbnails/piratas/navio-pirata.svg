@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Navio pirata -->
+  <!-- Casco -->
+  <path id="area-1" d="M50,280 L80,350 L320,350 L350,280Z" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Faixa do casco -->
+  <path id="area-2" d="M60,300 L340,300 L350,280 L50,280Z" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Mastro -->
+  <rect id="area-3" x="195" y="80" width="10" height="210" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Vela grande -->
+  <path id="area-4" d="M205,100 Q280,150 260,230 L205,230Z" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Vela pequena -->
+  <path id="area-5" d="M195,100 Q140,140 150,200 L195,200Z" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Bandeira pirata -->
+  <rect id="area-6" x="205" y="70" width="50" height="35" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Caveira na bandeira -->
+  <circle id="area-7" cx="230" cy="82" r="8" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Janelas -->
+  <circle id="area-8" cx="130" cy="310" r="12" fill="none" stroke="black" stroke-width="2"/>
+  <circle id="area-9" cx="200" cy="310" r="12" fill="none" stroke="black" stroke-width="2"/>
+  <circle id="area-10" cx="270" cy="310" r="12" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Ondas -->
+  <path id="area-11" d="M20,360 Q60,350 100,360 Q140,370 180,360 Q220,350 260,360 Q300,370 340,360 Q360,355 380,360 L380,400 L20,400Z" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Canhão -->
+  <rect id="area-12" x="90" y="275" width="25" height="10" fill="none" stroke="black" stroke-width="2"/>
+</svg>

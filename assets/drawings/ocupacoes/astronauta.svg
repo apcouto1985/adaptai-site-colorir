@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Astronauta -->
+  <!-- Capacete -->
+  <circle id="area-1" cx="200" cy="100" r="55" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Visor -->
+  <ellipse id="area-2" cx="200" cy="100" rx="38" ry="35" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Olhos dentro do visor -->
+  <circle id="area-3" cx="188" cy="95" r="5" fill="none" stroke="black" stroke-width="2"/>
+  <circle id="area-4" cx="212" cy="95" r="5" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Sorriso -->
+  <path id="area-5" d="M190,112 Q200,120 210,112" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Corpo/traje -->
+  <rect id="area-6" x="145" y="155" width="110" height="130" rx="10" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Painel no peito -->
+  <rect id="area-7" x="170" y="175" width="60" height="40" rx="5" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Botões -->
+  <circle id="area-8" cx="185" cy="190" r="6" fill="none" stroke="black" stroke-width="2"/>
+  <circle id="area-9" cx="215" cy="190" r="6" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Braço esquerdo -->
+  <path id="area-10" d="M145,175 Q100,200 90,240" fill="none" stroke="black" stroke-width="4"/>
+  <!-- Luva esquerda -->
+  <circle id="area-11" cx="87" cy="248" r="15" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Braço direito -->
+  <path id="area-12" d="M255,175 Q300,200 310,240" fill="none" stroke="black" stroke-width="4"/>
+  <!-- Luva direita -->
+  <circle id="area-13" cx="313" cy="248" r="15" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Pernas -->
+  <rect id="area-14" x="155" y="285" width="35" height="70" fill="none" stroke="black" stroke-width="2"/>
+  <rect id="area-15" x="210" y="285" width="35" height="70" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Botas -->
+  <rect id="area-16" x="148" y="345" width="48" height="25" rx="8" fill="none" stroke="black" stroke-width="2"/>
+  <rect id="area-17" x="203" y="345" width="48" height="25" rx="8" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Mochila -->
+  <rect id="area-18" x="250" y="160" width="20" height="50" rx="5" fill="none" stroke="black" stroke-width="2"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Triceratops -->
+  <!-- Crista -->
+  <path id="area-1" d="M280,100 Q320,60 340,80 Q360,100 340,130 Q320,150 300,140" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Cabeça -->
+  <path id="area-2" d="M300,140 Q330,160 340,190 Q340,210 310,220 L260,210 Q250,190 260,160Z" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Olho -->
+  <circle id="area-3" cx="295" cy="175" r="10" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Chifre grande -->
+  <polygon id="area-4" points="290,150 295,110 300,150" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Chifre esquerdo -->
+  <polygon id="area-5" points="275,155 270,130 280,155" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Chifre do nariz -->
+  <polygon id="area-6" points="330,195 340,180 335,200" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Pescoço -->
+  <path id="area-7" d="M260,180 Q240,190 230,210" fill="none" stroke="black" stroke-width="3"/>
+  <!-- Corpo -->
+  <ellipse id="area-8" cx="170" cy="240" rx="90" ry="55" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Barriga -->
+  <ellipse id="area-9" cx="180" cy="260" rx="50" ry="25" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Patas -->
+  <rect id="area-10" x="230" y="280" width="25" height="55" rx="5" fill="none" stroke="black" stroke-width="2"/>
+  <rect id="area-11" x="200" y="280" width="25" height="50" rx="5" fill="none" stroke="black" stroke-width="2"/>
+  <rect id="area-12" x="110" y="280" width="28" height="58" rx="5" fill="none" stroke="black" stroke-width="2"/>
+  <rect id="area-13" x="135" y="280" width="28" height="53" rx="5" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Cauda -->
+  <path id="area-14" d="M80,240 Q50,235 35,250 Q25,265 40,275" fill="none" stroke="black" stroke-width="3"/>
+</svg>
