@@ -1,5 +1,7 @@
 import { ColorPalette } from './ColorPalette.js';
 import { SVGCanvas } from './SVGCanvas.js';
+import saveLoadService from '../services/SaveLoadService.js';
+import { errorLogger } from '../utils/errorHandling.js';
 
 /**
  * Componente Tela de Colorir que integra Canvas SVG e Paleta de Cores
@@ -29,7 +31,7 @@ export class ColoringScreen {
     this.colorPalette = null;
     this.svgCanvas = null;
     this.coloredAreas = new Map();
-    this.saveLoadModal = null;
+    this.loadListContainer = null;
 
     this.render();
   }
@@ -38,50 +40,45 @@ export class ColoringScreen {
    * Renderiza a tela de colorir
    */
   render() {
-    // Limpar container
     this.container.innerHTML = '';
 
-    // Criar estrutura da tela
     const screen = document.createElement('div');
     screen.className = 'coloring-screen';
     screen.setAttribute('role', 'main');
     screen.setAttribute('aria-label', 'Tela de colorir');
 
-    // Header com título e botão voltar
     const header = this.createHeader();
     screen.appendChild(header);
 
-    // Container principal com canvas e paleta
     const mainContent = document.createElement('div');
     mainContent.className = 'coloring-main';
 
-    // Canvas SVG
     const canvasContainer = document.createElement('div');
     canvasContainer.className = 'canvas-container';
     mainContent.appendChild(canvasContainer);
 
-    // Paleta de cores
     const paletteContainer = document.createElement('div');
     paletteContainer.className = 'palette-container';
     mainContent.appendChild(paletteContainer);
 
     screen.appendChild(mainContent);
 
-    // Footer com botão limpar
     const footer = this.createFooter();
     screen.appendChild(footer);
 
     this.container.appendChild(screen);
 
-    // Adicionar listener global para Escape
     this.escapeHandler = (e) => {
       if (e.key === 'Escape') {
-        this.onBack();
+        if (this.loadListContainer) {
+          this.closeLoadList();
+        } else {
+          this.onBack();
+        }
       }
     };
     document.addEventListener('keydown', this.escapeHandler);
 
-    // Inicializar componentes
     this.initializeComponents(canvasContainer, paletteContainer);
   }
 
@@ -94,36 +91,20 @@ export class ColoringScreen {
     header.className = 'coloring-header';
     header.setAttribute('role', 'banner');
 
-    // Botão voltar
     const backButton = document.createElement('button');
     backButton.className = 'back-button';
     backButton.textContent = '← Voltar';
     backButton.setAttribute('type', 'button');
     backButton.setAttribute('aria-label', 'Voltar para galeria');
-    
-    // Garantir tamanho mínimo de 44x44px
     backButton.style.minWidth = '44px';
     backButton.style.minHeight = '44px';
 
-    backButton.addEventListener('click', () => {
-      this.onBack();
-    });
-
-    // Touch event para dispositivos móveis
+    backButton.addEventListener('click', () => this.onBack());
     backButton.addEventListener('touchstart', (e) => {
       e.preventDefault();
       this.onBack();
     });
 
-    // Keyboard event - Escape também volta
-    backButton.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        e.preventDefault();
-        this.onBack();
-      }
-    });
-
-    // Título do desenho
     const title = document.createElement('h1');
     title.className = 'drawing-title';
     title.textContent = this.drawing.name || 'Desenho para Colorir';
@@ -135,34 +116,57 @@ export class ColoringScreen {
   }
 
   /**
-   * Cria o footer com botão limpar
+   * Cria o footer com botões de ação
    * @returns {HTMLElement}
    */
   createFooter() {
     const footer = document.createElement('footer');
     footer.className = 'coloring-footer';
 
+    // Botão salvar
+    const saveButton = document.createElement('button');
+    saveButton.className = 'save-button';
+    saveButton.innerHTML = '<span class="save-icon">💾</span> <span class="save-text">Salvar</span>';
+    saveButton.setAttribute('type', 'button');
+    saveButton.setAttribute('aria-label', 'Salvar desenho colorido');
+    saveButton.style.minWidth = '44px';
+    saveButton.style.minHeight = '44px';
+    saveButton.addEventListener('click', () => this.handleSave());
+    saveButton.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      this.handleSave();
+    });
+
+    // Botão carregar
+    const loadButton = document.createElement('button');
+    loadButton.className = 'load-button';
+    loadButton.innerHTML = '<span class="load-icon">📂</span> <span class="load-text">Carregar</span>';
+    loadButton.setAttribute('type', 'button');
+    loadButton.setAttribute('aria-label', 'Carregar desenho salvo');
+    loadButton.style.minWidth = '44px';
+    loadButton.style.minHeight = '44px';
+    loadButton.addEventListener('click', () => this.handleLoad());
+    loadButton.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      this.handleLoad();
+    });
+
     // Botão limpar
     const clearButton = document.createElement('button');
     clearButton.className = 'clear-button';
-    clearButton.textContent = '🗑️ Limpar';
+    clearButton.innerHTML = '<span class="clear-icon">🗑️</span> <span class="clear-text">Limpar</span>';
     clearButton.setAttribute('type', 'button');
     clearButton.setAttribute('aria-label', 'Limpar todas as cores');
-    
-    // Garantir tamanho mínimo de 44x44px
     clearButton.style.minWidth = '44px';
     clearButton.style.minHeight = '44px';
-
-    clearButton.addEventListener('click', () => {
-      this.clearDrawing();
-    });
-
-    // Touch event para dispositivos móveis
+    clearButton.addEventListener('click', () => this.clearDrawing());
     clearButton.addEventListener('touchstart', (e) => {
       e.preventDefault();
       this.clearDrawing();
     });
 
+    footer.appendChild(saveButton);
+    footer.appendChild(loadButton);
     footer.appendChild(clearButton);
 
     return footer;
@@ -174,26 +178,18 @@ export class ColoringScreen {
    * @param {HTMLElement} paletteContainer - Container da paleta
    */
   async initializeComponents(canvasContainer, paletteContainer) {
-    // Criar paleta de cores
     this.colorPalette = new ColorPalette(paletteContainer, {
-      onColorSelect: (color) => {
-        this.handleColorSelect(color);
-      }
+      onColorSelect: (color) => this.handleColorSelect(color)
     });
 
-    // Definir cor inicial
     this.selectedColor = this.colorPalette.getSelectedColor();
 
-    // Criar canvas SVG
     this.svgCanvas = new SVGCanvas(canvasContainer, {
       svgUrl: this.drawing.svgUrl,
       selectedColor: this.selectedColor,
-      onAreaClick: (areaId, color) => {
-        this.handleAreaClick(areaId, color);
-      }
+      onAreaClick: (areaId, color) => this.handleAreaClick(areaId, color)
     });
 
-    // Carregar SVG
     try {
       await this.svgCanvas.loadSVG(this.drawing.svgUrl);
     } catch (error) {
@@ -207,10 +203,7 @@ export class ColoringScreen {
    * @param {string} color - Cor selecionada
    */
   handleColorSelect(color) {
-    console.log('[ColoringScreen] Cor selecionada:', color, 'tipo:', typeof color);
     this.selectedColor = color;
-    
-    // Atualizar cor no canvas
     if (this.svgCanvas) {
       this.svgCanvas.setSelectedColor(color);
     }
@@ -222,8 +215,7 @@ export class ColoringScreen {
    * @param {string} color - Cor aplicada
    */
   handleAreaClick(areaId, color) {
-    // Callback para extensões futuras
-    console.log(`Área ${areaId} colorida com ${color}`);
+    this.coloredAreas.set(areaId, color);
   }
 
   /**
@@ -233,31 +225,27 @@ export class ColoringScreen {
     if (this.svgCanvas) {
       this.svgCanvas.clearAllColors();
     }
-    
+    this.coloredAreas.clear();
     // A cor selecionada deve permanecer a mesma (Propriedade 22)
-    // Não fazemos nada com this.selectedColor ou this.colorPalette
   }
 
   /**
-   * Manipula salvamento do desenho
+   * Salva o desenho colorido no localStorage
    * @private
    */
   handleSave() {
     try {
-      // Verificar se há áreas coloridas
       if (this.coloredAreas.size === 0) {
         this.showNotification('Colora algumas áreas antes de salvar!', 'warning');
         return;
       }
 
-      // Obter SVG atual
       const svgContent = this.svgCanvas ? this.svgCanvas.getSVGContent() : null;
       if (!svgContent) {
         this.showNotification('Erro ao obter conteúdo do desenho', 'error');
         return;
       }
 
-      // Preparar dados para salvamento
       const drawingData = {
         drawingId: this.drawing.id,
         drawingName: this.drawing.name,
@@ -265,12 +253,8 @@ export class ColoringScreen {
         svgContent: svgContent
       };
 
-      // Abrir modal de salvamento
-      this.saveLoadModal.openSaveMode(drawingData, (result) => {
-        if (result.success) {
-          this.showNotification(result.message, 'success');
-        }
-      });
+      const result = saveLoadService.saveDrawing(drawingData);
+      this.showNotification(result.message, result.success ? 'success' : 'error');
     } catch (error) {
       console.error('Erro ao salvar desenho:', error);
       errorLogger.log(error, { context: 'coloring-screen-save' });
@@ -279,15 +263,25 @@ export class ColoringScreen {
   }
 
   /**
-   * Manipula carregamento de desenho salvo
+   * Mostra lista de desenhos salvos para carregar
    * @private
    */
   handleLoad() {
     try {
-      // Abrir modal de carregamento
-      this.saveLoadModal.openLoadMode(this.drawing.id, (savedData) => {
-        this.loadSavedDrawing(savedData);
-      });
+      // Fechar se já está aberta
+      if (this.loadListContainer) {
+        this.closeLoadList();
+        return;
+      }
+
+      const savedList = saveLoadService.getSavedDrawingsList(this.drawing.id);
+
+      if (savedList.length === 0) {
+        this.showNotification('Nenhum desenho salvo para este modelo.', 'info');
+        return;
+      }
+
+      this.showLoadList(savedList);
     } catch (error) {
       console.error('Erro ao carregar desenho:', error);
       errorLogger.log(error, { context: 'coloring-screen-load' });
@@ -296,22 +290,141 @@ export class ColoringScreen {
   }
 
   /**
-   * Carrega um desenho salvo
-   * @param {Object} savedData - Dados do desenho salvo
+   * Exibe a lista de desenhos salvos como overlay
+   * @param {Array} savedList - Lista de salvamentos
    * @private
    */
-  loadSavedDrawing(savedData) {
+  showLoadList(savedList) {
+    this.loadListContainer = document.createElement('div');
+    this.loadListContainer.className = 'save-load-modal show';
+    this.loadListContainer.setAttribute('role', 'dialog');
+    this.loadListContainer.setAttribute('aria-label', 'Carregar desenho salvo');
+
+    // Backdrop
+    const backdrop = document.createElement('div');
+    backdrop.className = 'modal-backdrop';
+    backdrop.addEventListener('click', () => this.closeLoadList());
+    this.loadListContainer.appendChild(backdrop);
+
+    // Conteúdo
+    const content = document.createElement('div');
+    content.className = 'modal-content';
+
+    // Header
+    const header = document.createElement('div');
+    header.className = 'modal-header';
+    const title = document.createElement('h2');
+    title.className = 'modal-title';
+    title.textContent = 'Carregar Desenho Salvo';
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'modal-close';
+    closeBtn.textContent = '✕';
+    closeBtn.setAttribute('aria-label', 'Fechar');
+    closeBtn.addEventListener('click', () => this.closeLoadList());
+    header.appendChild(title);
+    header.appendChild(closeBtn);
+    content.appendChild(header);
+
+    // Body com lista
+    const body = document.createElement('div');
+    body.className = 'modal-body';
+
+    savedList.forEach(saved => {
+      const item = document.createElement('div');
+      item.className = 'saved-drawing-item';
+      item.setAttribute('role', 'button');
+      item.setAttribute('tabindex', '0');
+      item.setAttribute('aria-label', `Carregar ${saved.customName}`);
+      item.style.cssText = 'padding:12px;margin-bottom:8px;border:2px solid #ddd;border-radius:8px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;min-height:44px;';
+
+      const info = document.createElement('div');
+      info.innerHTML = `<strong>${saved.customName}</strong><br><small style="color:#666">${new Date(saved.savedAt).toLocaleString('pt-BR')} · ${saved.preview.coloredAreas} áreas · ${saved.preview.uniqueColors} cores</small>`;
+
+      const deleteBtn = document.createElement('button');
+      deleteBtn.textContent = '🗑️';
+      deleteBtn.setAttribute('aria-label', `Remover ${saved.customName}`);
+      deleteBtn.style.cssText = 'min-width:44px;min-height:44px;background:#E74C3C;color:white;border:none;border-radius:8px;cursor:pointer;font-size:16px;';
+      deleteBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const result = saveLoadService.deleteDrawing(saved.id);
+        if (result.success) {
+          item.remove();
+          this.showNotification(result.message, 'success');
+          // Fechar se não sobrou nenhum
+          if (body.children.length === 0) {
+            this.closeLoadList();
+          }
+        }
+      });
+
+      item.appendChild(info);
+      item.appendChild(deleteBtn);
+
+      const loadHandler = () => {
+        this.loadSavedDrawing(saved.id);
+        this.closeLoadList();
+      };
+      item.addEventListener('click', loadHandler);
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          loadHandler();
+        }
+      });
+
+      // Hover
+      item.addEventListener('mouseenter', () => { item.style.borderColor = '#4A90E2'; item.style.backgroundColor = '#f0f7ff'; });
+      item.addEventListener('mouseleave', () => { item.style.borderColor = '#ddd'; item.style.backgroundColor = ''; });
+
+      body.appendChild(item);
+    });
+
+    content.appendChild(body);
+    this.loadListContainer.appendChild(content);
+    this.container.appendChild(this.loadListContainer);
+
+    // Focar no primeiro item
+    const firstItem = body.querySelector('[role="button"]');
+    if (firstItem) firstItem.focus();
+  }
+
+  /**
+   * Fecha a lista de carregamento
+   * @private
+   */
+  closeLoadList() {
+    if (this.loadListContainer) {
+      this.loadListContainer.remove();
+      this.loadListContainer = null;
+    }
+  }
+
+  /**
+   * Carrega um desenho salvo pelo ID
+   * @param {string} saveId - ID do salvamento
+   * @private
+   */
+  loadSavedDrawing(saveId) {
     try {
+      const result = saveLoadService.loadDrawing(saveId);
+      if (!result.success) {
+        this.showNotification('Desenho não encontrado.', 'error');
+        return;
+      }
+
+      const savedData = result.data;
+
       // Limpar desenho atual
       if (this.svgCanvas) {
         this.svgCanvas.clearAllColors();
       }
+      this.coloredAreas.clear();
 
       // Aplicar cores salvas
       if (savedData.coloredAreas) {
         Object.entries(savedData.coloredAreas).forEach(([areaId, color]) => {
           if (this.svgCanvas) {
-            this.svgCanvas.colorArea(areaId, color);
+            this.svgCanvas.applyColorToArea(areaId, color);
           }
           this.coloredAreas.set(areaId, color);
         });
@@ -326,12 +439,16 @@ export class ColoringScreen {
   }
 
   /**
-   * Exibe notificação
+   * Exibe notificação temporária
    * @param {string} message - Mensagem
-   * @param {string} type - Tipo (success, error, warning)
+   * @param {string} type - Tipo (success, error, warning, info)
    * @private
    */
   showNotification(message, type = 'info') {
+    // Remover notificação anterior se existir
+    const existing = this.container.querySelector('.notification');
+    if (existing) existing.remove();
+
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.textContent = message;
@@ -340,7 +457,6 @@ export class ColoringScreen {
 
     this.container.appendChild(notification);
 
-    // Remover após 3 segundos
     setTimeout(() => {
       if (notification.parentNode) {
         notification.remove();
@@ -358,7 +474,6 @@ export class ColoringScreen {
     errorDiv.textContent = message;
     errorDiv.setAttribute('role', 'alert');
     errorDiv.setAttribute('aria-live', 'assertive');
-    
     this.container.appendChild(errorDiv);
   }
 
@@ -392,24 +507,21 @@ export class ColoringScreen {
    * Destrói o componente e limpa recursos
    */
   destroy() {
-    // Remover listener de Escape
     if (this.escapeHandler) {
       document.removeEventListener('keydown', this.escapeHandler);
       this.escapeHandler = null;
     }
 
+    this.closeLoadList();
+
     if (this.colorPalette) {
       this.colorPalette.destroy();
     }
-    
+
     if (this.svgCanvas) {
       this.svgCanvas.destroy();
     }
 
-    if (this.saveLoadModal) {
-      this.saveLoadModal.destroy();
-    }
-    
     this.container.innerHTML = '';
   }
 }
