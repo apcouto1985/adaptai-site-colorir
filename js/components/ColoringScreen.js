@@ -28,6 +28,8 @@ export class ColoringScreen {
     this.selectedColor = null;
     this.colorPalette = null;
     this.svgCanvas = null;
+    this.coloredAreas = new Map();
+    this.saveLoadModal = null;
 
     this.render();
   }

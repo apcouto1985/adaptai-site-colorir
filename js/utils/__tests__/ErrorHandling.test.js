@@ -3,7 +3,7 @@
  */
 
 import { JSDOM } from 'jsdom';
-import { checkBrowserCompatibility, showIncompatibilityMessage } from '../browserCompatibility.js';
+import { checkBrowserCompatibility, showIncompatibilityMessage } from '../BrowserCompatibility.js';
 import { SVGManipulator } from '../../services/SVGManipulator.js';
 import LoaderService from '../../services/LoaderService.js';
 

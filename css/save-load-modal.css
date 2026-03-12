@@ -181,4 +181,10 @@
 }
 
 .preview-info .info-label {
-  color: var(--color-text-seco
+  color: var(--color-text-secondary);
+}
+
+.preview-info .info-value {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}

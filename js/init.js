@@ -2,7 +2,7 @@
  * Arquivo de inicialização da aplicação
  * Verifica compatibilidade do navegador antes de iniciar
  */
-import { initCompatibilityCheck } from './utils/browserCompatibility.js';
+import { initCompatibilityCheck } from './utils/BrowserCompatibility.js';
 import { errorLogger } from './utils/errorHandling.js';
 
 /**
