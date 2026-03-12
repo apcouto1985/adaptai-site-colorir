@@ -167,6 +167,18 @@
             "height": 500,
             "areaCount": 20
           }
+        },
+        {
+          "id": "unicornio",
+          "name": "Unicórnio",
+          "category": "animais",
+          "svgUrl": "/assets/drawings/animais/unicornio.svg",
+          "thumbnailUrl": "/assets/thumbnails/animais/unicornio.svg",
+          "metadata": {
+            "width": 500,
+            "height": 500,
+            "areaCount": 52
+          }
         }
       ]
     },
@@ -188,7 +200,20 @@
     {
       "id": "sereias",
       "name": "Sereias",
-      "drawings": []
+      "drawings": [
+        {
+          "id": "sereia",
+          "name": "Sereia",
+          "category": "sereias",
+          "svgUrl": "/assets/drawings/sereias/sereia.svg",
+          "thumbnailUrl": "/assets/thumbnails/sereias/sereia.svg",
+          "metadata": {
+            "width": 500,
+            "height": 500,
+            "areaCount": 110
+          }
+        }
+      ]
     },
     {
       "id": "princesas",
