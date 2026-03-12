@@ -9,7 +9,7 @@
           "name": "Gato",
           "category": "animais",
           "svgUrl": "/assets/drawings/animais/gato.svg",
-          "thumbnailUrl": "/assets/thumbnails/animais/gato.svg",
+          "thumbnailUrl": "/assets/thumbnails/animais/gato.png",
           "metadata": { "width": 800, "height": 600, "areaCount": 16 }
         },
         {
@@ -17,7 +17,7 @@
           "name": "Cachorro",
           "category": "animais",
           "svgUrl": "/assets/drawings/animais/cachorro.svg",
-          "thumbnailUrl": "/assets/thumbnails/animais/cachorro.svg",
+          "thumbnailUrl": "/assets/thumbnails/animais/cachorro.png",
           "metadata": { "width": 800, "height": 600, "areaCount": 18 }
         },
         {
@@ -25,7 +25,7 @@
           "name": "Peixe",
           "category": "animais",
           "svgUrl": "/assets/drawings/animais/peixe.svg",
-          "thumbnailUrl": "/assets/thumbnails/animais/peixe.svg",
+          "thumbnailUrl": "/assets/thumbnails/animais/peixe.png",
           "metadata": { "width": 800, "height": 600, "areaCount": 12 }
         },
         {
@@ -33,7 +33,7 @@
           "name": "Animal Kawaii",
           "category": "animais",
           "svgUrl": "/assets/drawings/animais/kawaii-animal.svg",
-          "thumbnailUrl": "/assets/thumbnails/animais/kawaii-animal.svg",
+          "thumbnailUrl": "/assets/thumbnails/animais/kawaii-animal.png",
           "metadata": { "width": 667, "height": 667, "areaCount": 299 }
         },
         {
@@ -41,7 +41,7 @@
           "name": "Cachorro Novo",
           "category": "animais",
           "svgUrl": "/assets/drawings/animais/cachorro-novo.svg",
-          "thumbnailUrl": "/assets/thumbnails/animais/cachorro-novo.svg",
+          "thumbnailUrl": "/assets/thumbnails/animais/cachorro-novo.png",
           "metadata": { "width": 500, "height": 500, "areaCount": 20 }
         },
         {
@@ -49,7 +49,7 @@
           "name": "Unicórnio",
           "category": "animais",
           "svgUrl": "/assets/drawings/animais/unicornio.svg",
-          "thumbnailUrl": "/assets/thumbnails/animais/unicornio.svg",
+          "thumbnailUrl": "/assets/thumbnails/animais/unicornio.png",
           "metadata": { "width": 500, "height": 500, "areaCount": 52 }
         }
       ]
@@ -63,7 +63,7 @@
           "name": "Carro Simples",
           "category": "carros",
           "svgUrl": "/assets/drawings/carros/carro-simples.svg",
-          "thumbnailUrl": "/assets/thumbnails/carros/carro-simples.svg",
+          "thumbnailUrl": "/assets/thumbnails/carros/carro-simples.png",
           "metadata": { "width": 800, "height": 600, "areaCount": 15 }
         },
         {
@@ -71,7 +71,7 @@
           "name": "Caminhão",
           "category": "carros",
           "svgUrl": "/assets/drawings/carros/caminhao.svg",
-          "thumbnailUrl": "/assets/thumbnails/carros/caminhao.svg",
+          "thumbnailUrl": "/assets/thumbnails/carros/caminhao.png",
           "metadata": { "width": 800, "height": 600, "areaCount": 18 }
         },
         {
@@ -79,7 +79,7 @@
           "name": "Ônibus",
           "category": "carros",
           "svgUrl": "/assets/drawings/carros/onibus.svg",
-          "thumbnailUrl": "/assets/thumbnails/carros/onibus.svg",
+          "thumbnailUrl": "/assets/thumbnails/carros/onibus.png",
           "metadata": { "width": 800, "height": 600, "areaCount": 20 }
         }
       ]
@@ -93,7 +93,7 @@
           "name": "Pizza",
           "category": "comidas",
           "svgUrl": "/assets/drawings/comidas/pizza.svg",
-          "thumbnailUrl": "/assets/thumbnails/comidas/pizza.svg",
+          "thumbnailUrl": "/assets/thumbnails/comidas/pizza.png",
           "metadata": { "width": 800, "height": 600, "areaCount": 12 }
         },
         {
@@ -101,7 +101,7 @@
           "name": "Sorvete",
           "category": "comidas",
           "svgUrl": "/assets/drawings/comidas/sorvete.svg",
-          "thumbnailUrl": "/assets/thumbnails/comidas/sorvete.svg",
+          "thumbnailUrl": "/assets/thumbnails/comidas/sorvete.png",
           "metadata": { "width": 800, "height": 600, "areaCount": 10 }
         },
         {
@@ -109,7 +109,7 @@
           "name": "Bolo",
           "category": "comidas",
           "svgUrl": "/assets/drawings/comidas/bolo.svg",
-          "thumbnailUrl": "/assets/thumbnails/comidas/bolo.svg",
+          "thumbnailUrl": "/assets/thumbnails/comidas/bolo.png",
           "metadata": { "width": 800, "height": 600, "areaCount": 14 }
         }
       ]
@@ -123,7 +123,7 @@
           "name": "Bola de Futebol",
           "category": "esportes",
           "svgUrl": "/assets/drawings/esportes/bola-futebol.svg",
-          "thumbnailUrl": "/assets/thumbnails/esportes/bola-futebol.svg",
+          "thumbnailUrl": "/assets/thumbnails/esportes/bola-futebol.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 10 }
         },
         {
@@ -131,7 +131,7 @@
           "name": "Raquete de Tênis",
           "category": "esportes",
           "svgUrl": "/assets/drawings/esportes/raquete-tenis.svg",
-          "thumbnailUrl": "/assets/thumbnails/esportes/raquete-tenis.svg",
+          "thumbnailUrl": "/assets/thumbnails/esportes/raquete-tenis.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 8 }
         },
         {
@@ -139,7 +139,7 @@
           "name": "Skate",
           "category": "esportes",
           "svgUrl": "/assets/drawings/esportes/skate.svg",
-          "thumbnailUrl": "/assets/thumbnails/esportes/skate.svg",
+          "thumbnailUrl": "/assets/thumbnails/esportes/skate.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 9 }
         }
       ]
@@ -153,7 +153,7 @@
           "name": "Montanhas",
           "category": "paisagens",
           "svgUrl": "/assets/drawings/paisagens/montanhas.svg",
-          "thumbnailUrl": "/assets/thumbnails/paisagens/montanhas.svg",
+          "thumbnailUrl": "/assets/thumbnails/paisagens/montanhas.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 11 }
         },
         {
@@ -161,7 +161,7 @@
           "name": "Praia",
           "category": "paisagens",
           "svgUrl": "/assets/drawings/paisagens/praia.svg",
-          "thumbnailUrl": "/assets/thumbnails/paisagens/praia.svg",
+          "thumbnailUrl": "/assets/thumbnails/paisagens/praia.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 12 }
         },
         {
@@ -169,7 +169,7 @@
           "name": "Arco-Íris",
           "category": "paisagens",
           "svgUrl": "/assets/drawings/paisagens/arco-iris.svg",
-          "thumbnailUrl": "/assets/thumbnails/paisagens/arco-iris.svg",
+          "thumbnailUrl": "/assets/thumbnails/paisagens/arco-iris.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 12 }
         }
       ]
@@ -183,7 +183,7 @@
           "name": "Casa",
           "category": "locais",
           "svgUrl": "/assets/drawings/locais/casa.svg",
-          "thumbnailUrl": "/assets/thumbnails/locais/casa.svg",
+          "thumbnailUrl": "/assets/thumbnails/locais/casa.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 10 }
         },
         {
@@ -191,7 +191,7 @@
           "name": "Escola",
           "category": "locais",
           "svgUrl": "/assets/drawings/locais/escola.svg",
-          "thumbnailUrl": "/assets/thumbnails/locais/escola.svg",
+          "thumbnailUrl": "/assets/thumbnails/locais/escola.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 14 }
         }
       ]
@@ -205,7 +205,7 @@
           "name": "Borboleta",
           "category": "insetos",
           "svgUrl": "/assets/drawings/insetos/borboleta.svg",
-          "thumbnailUrl": "/assets/thumbnails/insetos/borboleta.svg",
+          "thumbnailUrl": "/assets/thumbnails/insetos/borboleta.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 12 }
         },
         {
@@ -213,7 +213,7 @@
           "name": "Joaninha",
           "category": "insetos",
           "svgUrl": "/assets/drawings/insetos/joaninha.svg",
-          "thumbnailUrl": "/assets/thumbnails/insetos/joaninha.svg",
+          "thumbnailUrl": "/assets/thumbnails/insetos/joaninha.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 16 }
         },
         {
@@ -221,7 +221,7 @@
           "name": "Abelha",
           "category": "insetos",
           "svgUrl": "/assets/drawings/insetos/abelha.svg",
-          "thumbnailUrl": "/assets/thumbnails/insetos/abelha.svg",
+          "thumbnailUrl": "/assets/thumbnails/insetos/abelha.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 12 }
         }
       ]
@@ -235,7 +235,7 @@
           "name": "Brasil",
           "category": "bandeiras",
           "svgUrl": "/assets/drawings/bandeiras/brasil.svg",
-          "thumbnailUrl": "/assets/thumbnails/bandeiras/brasil.svg",
+          "thumbnailUrl": "/assets/thumbnails/bandeiras/brasil.png",
           "metadata": { "width": 400, "height": 300, "areaCount": 7 }
         },
         {
@@ -243,7 +243,7 @@
           "name": "Bandeira Colorida",
           "category": "bandeiras",
           "svgUrl": "/assets/drawings/bandeiras/bandeira-colorida.svg",
-          "thumbnailUrl": "/assets/thumbnails/bandeiras/bandeira-colorida.svg",
+          "thumbnailUrl": "/assets/thumbnails/bandeiras/bandeira-colorida.png",
           "metadata": { "width": 400, "height": 300, "areaCount": 7 }
         }
       ]
@@ -257,7 +257,7 @@
           "name": "Castelo",
           "category": "castelos",
           "svgUrl": "/assets/drawings/castelos/castelo.svg",
-          "thumbnailUrl": "/assets/thumbnails/castelos/castelo.svg",
+          "thumbnailUrl": "/assets/thumbnails/castelos/castelo.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 17 }
         },
         {
@@ -265,7 +265,7 @@
           "name": "Castelo de Princesa",
           "category": "castelos",
           "svgUrl": "/assets/drawings/castelos/castelo-princesa.svg",
-          "thumbnailUrl": "/assets/thumbnails/castelos/castelo-princesa.svg",
+          "thumbnailUrl": "/assets/thumbnails/castelos/castelo-princesa.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 16 }
         }
       ]
@@ -279,7 +279,7 @@
           "name": "Navio Pirata",
           "category": "piratas",
           "svgUrl": "/assets/drawings/piratas/navio-pirata.svg",
-          "thumbnailUrl": "/assets/thumbnails/piratas/navio-pirata.svg",
+          "thumbnailUrl": "/assets/thumbnails/piratas/navio-pirata.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 12 }
         },
         {
@@ -287,7 +287,7 @@
           "name": "Chapéu Pirata",
           "category": "piratas",
           "svgUrl": "/assets/drawings/piratas/chapeu-pirata.svg",
-          "thumbnailUrl": "/assets/thumbnails/piratas/chapeu-pirata.svg",
+          "thumbnailUrl": "/assets/thumbnails/piratas/chapeu-pirata.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 13 }
         }
       ]
@@ -301,7 +301,7 @@
           "name": "Sereia",
           "category": "sereias",
           "svgUrl": "/assets/drawings/sereias/sereia.svg",
-          "thumbnailUrl": "/assets/thumbnails/sereias/sereia.svg",
+          "thumbnailUrl": "/assets/thumbnails/sereias/sereia.png",
           "metadata": { "width": 500, "height": 500, "areaCount": 110 }
         }
       ]
@@ -315,7 +315,7 @@
           "name": "Princesa",
           "category": "princesas",
           "svgUrl": "/assets/drawings/princesas/princesa.svg",
-          "thumbnailUrl": "/assets/thumbnails/princesas/princesa.svg",
+          "thumbnailUrl": "/assets/thumbnails/princesas/princesa.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 16 }
         },
         {
@@ -323,7 +323,7 @@
           "name": "Fada",
           "category": "princesas",
           "svgUrl": "/assets/drawings/princesas/fada.svg",
-          "thumbnailUrl": "/assets/thumbnails/princesas/fada.svg",
+          "thumbnailUrl": "/assets/thumbnails/princesas/fada.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 14 }
         }
       ]
@@ -337,7 +337,7 @@
           "name": "Monstro Simpático",
           "category": "monstros",
           "svgUrl": "/assets/drawings/monstros/monstro-simpatico.svg",
-          "thumbnailUrl": "/assets/thumbnails/monstros/monstro-simpatico.svg",
+          "thumbnailUrl": "/assets/thumbnails/monstros/monstro-simpatico.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 15 }
         },
         {
@@ -345,7 +345,7 @@
           "name": "Alien Fofo",
           "category": "monstros",
           "svgUrl": "/assets/drawings/monstros/alien-fofo.svg",
-          "thumbnailUrl": "/assets/thumbnails/monstros/alien-fofo.svg",
+          "thumbnailUrl": "/assets/thumbnails/monstros/alien-fofo.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 16 }
         }
       ]
@@ -359,7 +359,7 @@
           "name": "Bombeiro",
           "category": "ocupacoes",
           "svgUrl": "/assets/drawings/ocupacoes/bombeiro.svg",
-          "thumbnailUrl": "/assets/thumbnails/ocupacoes/bombeiro.svg",
+          "thumbnailUrl": "/assets/thumbnails/ocupacoes/bombeiro.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 14 }
         },
         {
@@ -367,7 +367,7 @@
           "name": "Astronauta",
           "category": "ocupacoes",
           "svgUrl": "/assets/drawings/ocupacoes/astronauta.svg",
-          "thumbnailUrl": "/assets/thumbnails/ocupacoes/astronauta.svg",
+          "thumbnailUrl": "/assets/thumbnails/ocupacoes/astronauta.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 18 }
         }
       ]
@@ -381,7 +381,7 @@
           "name": "T-Rex",
           "category": "dinossauros",
           "svgUrl": "/assets/drawings/dinossauros/t-rex.svg",
-          "thumbnailUrl": "/assets/thumbnails/dinossauros/t-rex.svg",
+          "thumbnailUrl": "/assets/thumbnails/dinossauros/t-rex.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 14 }
         },
         {
@@ -389,7 +389,7 @@
           "name": "Estegossauro",
           "category": "dinossauros",
           "svgUrl": "/assets/drawings/dinossauros/estegossauro.svg",
-          "thumbnailUrl": "/assets/thumbnails/dinossauros/estegossauro.svg",
+          "thumbnailUrl": "/assets/thumbnails/dinossauros/estegossauro.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 18 }
         },
         {
@@ -397,7 +397,7 @@
           "name": "Triceratops",
           "category": "dinossauros",
           "svgUrl": "/assets/drawings/dinossauros/triceratops.svg",
-          "thumbnailUrl": "/assets/thumbnails/dinossauros/triceratops.svg",
+          "thumbnailUrl": "/assets/thumbnails/dinossauros/triceratops.png",
           "metadata": { "width": 400, "height": 400, "areaCount": 14 }
         }
       ]
